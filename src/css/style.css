@@ -2,6 +2,7 @@
 
 :root {
     --primary: #f353c3;
+    --primary-darker: #d8099a;
     --normal: #ffffff;
     --black: #13131a;
     --bg: #0c1013;
@@ -190,6 +191,7 @@ header {
     overflow: hidden;
     margin-bottom: 2rem;
     background-color: var(--black);
+    margin: auto;
 }
 
 .header_container {
@@ -198,14 +200,49 @@ header {
     position: relative;
 }
 
-.header_left {
-    flex: 1;
-}
-
 .header_right {
-    flex: 1;
+    margin-bottom: 60px;
+    margin-left: 20px;
 }
 
+.header_left {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 20px;
+}
+
+.header_left img {
+    margin-top: 15px;
+}
+@media screen and (max-width: 480px) {
+    .header_left img {
+      height: 200px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .header_left img {
+      height: 250px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .header_left img {
+      height: 320px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header_left img {
+      height: 380px;
+    }
+}
+
+@media screen and (max-width: 2080px) {
+    .header_left img {
+      height: 420px;
+    }
+}
 .header_right .text-1 {
     font-size: 1.8rem;
     margin-bottom: 0.3rem;
@@ -567,6 +604,37 @@ header::before {
     margin-top: 3rem;
 }
 
+.my-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course:hover .my-img img ,
+    .my-img:hover {
+    transform: scale(1.4);
+}
+
+.text-overlay {
+    position: absolute; 
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+}
+.text-overlay h4 {
+    margin-bottom: 1rem;
+}
+
+.text-overlay p {
+    font-weight: 500;
+}
+
+.portfolio_container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
 .gallery {
     display: flex;
     justify-content: center;
@@ -799,7 +867,7 @@ footer ul li a:hover {
         opacity: 0;
     }
     .nav_menu li a{
-        background-color:#29e9bcf8;
+        background-color: var(--primary-darker);
         box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
         width: 100%;
         height: 100%;
